@@ -1,0 +1,13 @@
+name: push
+
+on: push
+
+jobs:
+  test-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print
+      id: echo
+      run: |
+        echo "this workflow trigered when you push changes into a branch"
+        
