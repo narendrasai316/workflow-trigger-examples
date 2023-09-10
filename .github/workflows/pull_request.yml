@@ -1,0 +1,16 @@
+name: pull request
+
+on: 
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  test-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print
+      id: echo
+      run: |
+        echo "this workflow trigered when you raised a PR into a main branch"
+        
