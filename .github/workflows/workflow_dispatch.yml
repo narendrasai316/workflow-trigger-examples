@@ -1,0 +1,13 @@
+name: workflow dispatch
+
+on: workflow_dispatch
+
+jobs:
+  test-workflow-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print
+      id: echo
+      run: |
+        echo "this workflow trigered when you run this manually"
+        
