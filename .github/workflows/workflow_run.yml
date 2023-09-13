@@ -1,0 +1,17 @@
+name: workflow run
+
+on: 
+  workflow_run:
+    workflows: ["workflow dispatch"]
+    types:
+      - completed
+
+jobs:
+  test-workflow-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print
+      id: echo
+      run: |
+        echo "this workflow trigered when the dependent workflow workflow dispatch"
+        
