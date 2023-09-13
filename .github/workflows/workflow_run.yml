@@ -1,4 +1,4 @@
-name: workflow dispatch
+name: workflow run
 
 on: 
   workflow_run:
