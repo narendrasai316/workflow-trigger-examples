@@ -1,0 +1,17 @@
+name: reusable workflow
+
+on: 
+  workflow_call:
+    inputs:
+      event:
+        required: false
+        type: string
+  
+jobs:
+  test-workflow-dispatch:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print
+      id: echo
+      run: |
+        echo "this workflow is reusable workflow. It triggererd when ${{ inputs.event }}"

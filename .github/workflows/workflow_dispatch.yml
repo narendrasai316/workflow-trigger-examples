@@ -11,3 +11,7 @@ jobs:
       run: |
         echo "this workflow trigered when you run this manually"
         
+    - name: reusable
+      uses: ./.github/actions
+      with:
+        event: ${{ github.event_name }}

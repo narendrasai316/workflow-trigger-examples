@@ -14,4 +14,8 @@ jobs:
       id: echo
       run: |
         echo "this workflow trigered when the dependent workflow workflow dispatch"
-        
+    
+    - name: reusable
+      uses: ./.github/actions
+      with:
+        event: ${{ github.event_name }}
