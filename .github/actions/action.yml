@@ -3,7 +3,7 @@ name: reusable workflow
 on: 
   workflow_call:
     inputs:
-      event:
+      demo:
         required: false
         type: string
   
@@ -14,4 +14,4 @@ jobs:
     - name: print
       id: echo
       run: |
-        echo "this workflow is reusable workflow. It triggererd when ${{ inputs.event }}"
+        echo "this workflow is reusable workflow. It triggererd when ${{ inputs.demo }}"

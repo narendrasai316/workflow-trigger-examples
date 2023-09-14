@@ -16,4 +16,4 @@ jobs:
     - name: reusable
       uses: ./.github/actions
       with:
-        event: ${{ github.event_name }}
+        demo: ${{ github.event_name }}
