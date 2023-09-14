@@ -9,8 +9,14 @@ jobs:
   test-push:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 
     - name: print
       id: echo
       run: |
         echo "this workflow trigered when you push changes into a branch"
-        
+     
+    - name: reusable
+      uses: ./.github/actions
+      with:
+        demo: ${{ github.event_name }}

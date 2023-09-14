@@ -10,8 +10,14 @@ jobs:
   test-workflow-dispatch:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 
     - name: print
       id: echo
       run: |
         echo "this workflow trigered when the dependent workflow workflow dispatch"
-        
+    
+    - name: reusable
+      uses: ./.github/actions
+      with:
+        demo: ${{ github.event_name }}
