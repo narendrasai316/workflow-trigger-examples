@@ -6,7 +6,7 @@ on:
       demo:
         required: false
         type: string
-  
+
 jobs:
   test-workflow-dispatch:
     runs-on: ubuntu-latest
@@ -14,4 +14,5 @@ jobs:
     - name: print
       id: echo
       run: |
-        echo "this workflow is reusable workflow. It triggererd when ${{ github.event.inputs.demo }}"
+        echo "this workflow is reusable workflow. It triggererd when ${{ inputs.demo }}"
+      bash: shell
